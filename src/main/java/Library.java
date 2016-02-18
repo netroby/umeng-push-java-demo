@@ -4,8 +4,18 @@
  *
  * @author huzhifeng, @date 2/17/16 10:34 AM
  */
+import push.android.AndroidBroadcast;
+
 public class Library {
     public boolean someLibraryMethod() {
+        String appkey = "test";
+        String appMasterSecret = "demo";
+        try {
+        AndroidBroadcast broadcast = new AndroidBroadcast(appkey,appMasterSecret);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
         return true;
     }
 }
